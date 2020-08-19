@@ -1,0 +1,25 @@
+//const message = 'i am here to save the day';
+function App(){
+  const [msg, setMesg] = React.useState('Howdy, from Houston!');
+  
+  function handleClick() {
+    setMesg('my new message')
+  }
+  return (
+    <div> 
+      <h1>{msg} </h1>
+      <button onClick={handleClick}>
+        Update Message!
+      </button>
+    </div>
+   );
+}
+
+
+ReactDOM.render(
+  <div>
+    <App/>
+  </div>
+  ,
+    document.getElementById('root')
+);
